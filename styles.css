@@ -524,24 +524,6 @@ footer {
     color: #0056b3;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-text {
-        text-align: center;
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .portfolio-item {
-        flex: 1 1 100%; /* Full width for smaller screens */
-    }
-}
 /* Basic Media Query for iPhones and Small Screens */
 @media (max-width: 480px) {
     /* General Styles for Smaller Screens */
