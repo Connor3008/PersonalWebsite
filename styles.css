@@ -542,3 +542,70 @@ footer {
         flex: 1 1 100%; /* Full width for smaller screens */
     }
 }
+/* Basic Media Query for iPhones and Small Screens */
+@media (max-width: 480px) {
+    /* General Styles for Smaller Screens */
+    body {
+        font-size: 14px; /* Slightly smaller base font size */
+        line-height: 1.4;
+        padding: 0 10px; /* Add some padding to the edges */
+    }
+
+    /* Navigation Bar */
+    header nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center; /* Center the links */
+        padding: 0;
+    }
+
+    header nav ul li {
+        margin: 10px 0; /* Add vertical spacing */
+    }
+
+    header nav ul li a {
+        font-size: 16px; /* Slightly smaller font size */
+        padding: 10px 15px; /* Adjust padding for touch areas */
+    }
+
+    /* Hero Section */
+    #intro, #galaga-hero, #swordfish-hero {
+        padding: 40px 15px; /* Reduce padding for smaller screens */
+        background-size: cover; /* Ensure the background image scales well */
+    }
+
+    #intro h1, #galaga-hero h1, #swordfish-hero h1 {
+        font-size: 2.5rem; /* Smaller heading for smaller screens */
+    }
+
+    #intro p, #galaga-hero p, #swordfish-hero p {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+
+    /* Portfolio Grid */
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Single column for small screens */
+    }
+
+    .portfolio-item {
+        margin: 10px 0; /* Reduce margins for tighter spacing */
+        padding: 10px; /* Adjust padding for smaller items */
+    }
+
+    /* Buttons */
+    .btn {
+        font-size: 0.9rem; /* Adjust font size for buttons */
+        padding: 10px 20px; /* Reduce padding */
+    }
+
+    .btn-container {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Add spacing between buttons */
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.8rem; /* Slightly smaller footer text */
+        padding: 10px 5px;
+    }
+}
+
