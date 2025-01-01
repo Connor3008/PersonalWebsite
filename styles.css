@@ -1,0 +1,544 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #f7f7f7; /* Subtle off-white for background */
+    color: #333; /* Neutral dark text */
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+    color: #444; /* Dark gray for headers */
+}
+
+p {
+    color: #555; /* Medium gray for body text */
+    line-height: 1.8;
+}
+
+/* Header Styles */
+header {
+    background: #222; /* Dark background for contrast */
+    color: #fff; /* White text */
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff; /* White text */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+header nav ul li a:hover {
+    background: #444; /* Darker hover */
+    color: #fff; /* Maintain white text */
+}
+
+/* Intro Section */
+#intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    margin-top: 50px;
+    background: url('images/coding-background.jpg') no-repeat center center / cover; /* Background coding image */
+    color: #fff; /* Adjust text color for contrast */
+    border-bottom: 4px solid #333; /* Dark border for separation */
+}
+
+#intro .info-container {
+    background: rgba(0, 0, 0, 0.8); /* Stronger semi-transparent black */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 700px;
+    text-align: center;
+}
+
+#intro h1 {
+    font-family: 'Lobster', cursive;
+    margin-bottom: 15px;
+    font-size: 4rem;
+    color: #ffffff; /* Subtle blue highlight */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+#intro p {
+    font-size: 1.3rem;
+    color: #ddd; /* Light gray text for readability */
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+#intro .btn {
+    display: inline-block;
+    background: #333; /* Darker button for emphasis */
+    color: #fff; /* White text */
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#intro .btn:hover {
+    background: #555; /* Subtle hover */
+    transform: scale(1.1);
+}
+
+#intro .btn:active {
+    transform: scale(0.95);
+}
+
+/* Education Section */
+#education {
+    background: #f7f7f7; /* Lighter background for contrast */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.education-item {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    text-align: left;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.education-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+/* General Portfolio Styling */
+#portfolio {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.portfolio-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.portfolio-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.portfolio-item .btn {
+    display: inline-block;
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.portfolio-item .btn:hover {
+    background: #555;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #222;
+    color: #fff;
+    font-size: 0.9rem;
+}
+/* Sword Fish Hero Section */
+#swordfish-hero {
+    background: url('../images/swordfish-background.jpg') no-repeat center center / cover;
+    padding: 80px 20px;
+    color: #fff;
+    text-align: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    border-bottom: 4px solid #333;
+}
+
+#swordfish-hero .hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+#swordfish-hero .hero-text-container {
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+}
+
+#swordfish-hero .hero-text-container h1 {
+    font-family: 'Lobster', cursive;
+    margin-bottom: 15px;
+    font-size: 3.5rem;
+    color: #ffd700; /* Gold text for visibility */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+#swordfish-hero .hero-text-container p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+/* Sword Fish Details Section */
+#swordfish-details {
+    background: #222; /* Dark background for contrast */
+    color: #fff; /* White text for readability */
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 4px solid #444; /* Subtle border for separation */
+}
+
+#swordfish-details h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00bcd4; /* Subtle blue for section headings */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
+    border-bottom: 2px solid #00bcd4; /* Underline for emphasis */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Shared List Styling for Sword Fish */
+#swordfish-details .shared-list {
+    list-style: none; /* Removes bullets */
+    padding: 0; /* Removes default padding */
+    text-align: center; /* Centers the list items */
+}
+
+#swordfish-details .shared-list li {
+    display: inline-block; /* Allows centering and compact layout */
+    margin: 10px auto; /* Centered margin */
+    padding: 10px 20px; /* Adjust horizontal padding */
+    background: rgba(255, 255, 255, 0.1); /* Subtle background highlight */
+    border-radius: 5px; /* Rounded corners for list items */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-size: 1rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+    max-width: 300px; /* Ensures consistent width */
+    text-align: center; /* Aligns text inside the list items */
+}
+
+#swordfish-details .shared-list li:hover {
+    background: rgba(255, 255, 255, 0.2); /* Brighter hover effect */
+    transform: scale(1.05); /* Slight growth on hover */
+    max-width: 300px; /* Maintain width during hover */
+}
+
+/* Hero Section */
+#galaga-hero {
+    background: url('../images/starry.jpg') no-repeat center center / cover;
+    padding: 80px 20px;
+    color: #fff;
+    text-align: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    border-bottom: 4px solid #333;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.hero-text-container {
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+}
+
+.hero-text-container h1 {
+    font-family: 'Lobster', cursive;
+    margin-bottom: 15px;
+    font-size: 3.5rem;
+    color: #ffd700; /* Gold text for visibility */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text-container p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+
+/* Galaga Details Section */
+#galaga-details {
+    background: #222; /* Dark background for contrast */
+    color: #fff; /* White text for readability */
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 4px solid #444; /* Subtle border for separation */
+}
+
+#galaga-details h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00bcd4; /* Subtle blue for section headings */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
+    border-bottom: 2px solid #00bcd4; /* Underline for emphasis */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Shared List Styling */
+.shared-list {
+    list-style: none; /* Removes bullets */
+    padding: 0; /* Removes default padding */
+    text-align: center; /* Centers the list items */
+}
+
+.shared-list li {
+    display: inline-block; /* Allows centering and compact layout */
+    margin: 10px auto; /* Centered margin */
+    padding: 10px 20px; /* Adjust horizontal padding */
+    background: rgba(255, 255, 255, 0.1); /* Subtle background highlight */
+    border-radius: 5px; /* Rounded corners for list items */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-size: 1rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+    max-width: 300px; /* Ensures consistent width */
+    text-align: center; /* Aligns text inside the list items */
+}
+
+.shared-list li:hover {
+    background: rgba(255, 255, 255, 0.2); /* Brighter hover effect */
+    transform: scale(1.05); /* Slight growth on hover */
+    max-width: 300px; /* Maintain width during hover */
+}
+
+
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btn.github, .btn.download {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn.github {
+    background: #6cc644;
+    color: #fff;
+}
+
+.btn.github:hover {
+    background: #5da639;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn.download {
+    background: #2088ff;
+    color: #fff;
+}
+
+.btn.download:hover {
+    background: #1a6fd1;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Button Container */
+.btn-container {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 20px; /* Add space between buttons */
+    margin-top: 20px; /* Add spacing above the buttons */
+}
+
+/* General Button Styling */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 25px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    color: #000000; /* White text for better contrast */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for emphasis */
+}
+
+/* View on GitHub Button */
+.btn.github {
+    background: #6cc644; /* GitHub green */
+}
+
+.btn.github:hover {
+    background: #5da639; /* Darker green on hover */
+    transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+.btn.github:active {
+    transform: scale(0.95); /* Slight shrink on click */
+}
+
+/* Download JAR Button */
+.btn.download {
+    background: #2088ff; /* Bright blue for emphasis */
+}
+
+.btn.download:hover {
+    background: #1a6fd1; /* Slightly darker blue on hover */
+    transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+.btn.download:active {
+    transform: scale(0.95); /* Slight shrink on click */
+}
+
+/* About Section Styling */
+#about {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f9f9f9;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.about-text {
+    max-width: 700px;
+    text-align: left;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+.about-text a {
+    color: #2088ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-text a:hover {
+    color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio-item {
+        flex: 1 1 100%; /* Full width for smaller screens */
+    }
+}
