@@ -63,7 +63,7 @@ header nav ul li a:hover {
     text-align: center;
     padding: 80px 20px;
     margin-top: 50px;
-    background: url('images/coding-background.jpg') no-repeat center center / cover; /* Background coding image */
+    background: url('coding-background.jpg') no-repeat center center / cover; /* Background coding image */
     color: #fff; /* Adjust text color for contrast */
     border-bottom: 4px solid #333; /* Dark border for separation */
 }
