@@ -145,9 +145,9 @@ header nav ul li a:hover {
 }
 
 .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Create flexible columns */
+    gap: 20px; /* Space between grid items */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -523,54 +523,178 @@ footer {
 .about-text a:hover {
     color: #0056b3;
 }
-/* Responsive Design */
+/* Portfolio Grid Styles */
+#portfolio-grid {
+    display: flex; /* Use Flexbox to align items horizontally */
+    flex-wrap: wrap; /* Allow wrapping if there are too many items to fit in one row */
+    gap: 20px; /* Add spacing between items */
+    justify-content: center; /* Center the items horizontally */
+    padding: 20px;
+}
+
+/* Individual Portfolio Item */
+.portfolio-item {
+    flex: 1 1 calc(33.33% - 20px); /* Responsive sizing: 3 items per row */
+    box-sizing: border-box; /* Include padding and borders in width calculations */
+    max-width: 300px; /* Set a max width for items */
+    text-align: center; /* Center text within each item */
+    border: 1px solid #ccc; /* Optional: Add a border for visual clarity */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure content stays inside the item box */
+    transition: transform 0.3s ease; /* Smooth hover animation */
+}
+
+/* Portfolio Item Hover Effect */
+.portfolio-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Portfolio Item Images */
+.portfolio-item img {
+    width: 100%; /* Ensure images fit within the item */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    border-bottom: 1px solid #ccc; /* Separate image from text */
+}
+
+/* Ensure buttons in the grid are aligned */
+.btn-container {
+    margin-top: 10px;
+}
+/* Default Styles for Desktop */
+#menu-toggle {
+    display: none; /* Hide toggle button on larger screens */
+}
+
+#nav-menu {
+    display: flex; /* Show navigation menu by default */
+    justify-content: center; /* Center align items horizontally */
+    gap: 20px; /* Add spacing between items */
+}
+/* Hide Welcome Text */
+.header-text {
+    display: none; /* Ensure the text is hidden on all screen sizes */
+}
+
+
+/* Responsive Design for 768px and below */
 @media (max-width: 768px) {
+    /* Toggle Button for Collapsed Navigation */
+    #menu-toggle {
+        display: block; /* Show toggle button on smaller screens */
+        background-color: white;
+        border: 2px solid rgb(0, 0, 0);
+        font-size: 24px;
+        color: rgb(0, 0, 0);
+        border-radius: 50%;
+        padding: 4px 8px; /* Adjusted padding for better size */
+        cursor: pointer;
+        position: absolute; /* Place the toggle button */
+        top: 31.75px; /* Adjust position to the top */
+        left: 15px; /* Align to the top-left */
+        z-index: 1001; /* Ensure it appears above other elements */
+        transition: background-color 0.3s ease;
+    }
+
+    /* Hover Effect for Toggle Button */
+    #menu-toggle:hover {
+        background-color: white;
+        color: #007acc;
+    }
+
+    /* Active State for Toggle Button */
+    #menu-toggle:active {
+        background-color: #005f99; /* Slightly darker blue for active state */
+        color: white;
+    }
+
+    /* Collapsed Navigation Menu */
+    #nav-menu {
+        display: none; /* Hide by default */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align the links */
+        padding: 4px 0; /* Reduced padding */
+        background: linear-gradient(135deg, #007acc, #005f99); /* Gradient background */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduced shadow for a sleeker look */
+        position: absolute;
+        top: 60px; /* Below the header */
+        width: 100%; /* Full-width menu */
+        z-index: 1000;
+        border-radius: 8px; /* Rounded corners */
+        animation: fadeIn 0.3s ease-out; /* Add fade-in animation */
+        max-height: 80vh; /* Limit the max height */
+        overflow-y: auto; /* Scroll if the menu overflows */
+    }
+
+    #nav-menu.active {
+        display: flex; /* Make visible when active */
+    }
+
+    #nav-menu li {
+        margin: 8px 0; /* Reduced spacing between links */
+    }
+
+    #nav-menu li a {
+        padding: 10px 18px; /* Reduced padding for a more compact look */
+        color: white; /* White text for contrast */
+        font-size: 16px; /* Adjusted font size for a better fit */
+        text-decoration: none; /* Remove underlines */
+        border: 2px solid transparent; /* Add border for hover effect */
+        border-radius: 5px; /* Rounded button-like appearance */
+        transition: all 0.3s ease-in-out;
+    }
+
+    #nav-menu li a:hover {
+        background-color: white; /* Highlight background */
+        color: #007acc; /* Complementary text color */
+        border-color: #007acc; /* Border matches hover color */
+        transform: scale(1.05); /* Slight zoom on hover */
+    }
+
+    /* About Section */
     .about-container {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center; /* Center align text */
     }
 
     .about-text {
-        text-align: center;
+        text-align: center; /* Center text */
     }
+    /* Add padding to the top of the main content to avoid overlap with the toggle button */
+    body.about main {
+        padding-top: 60px; /* Adjust this value to match the height of your toggle button */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+    /* Portfolio Items */
     .portfolio-item {
         flex: 1 1 100%; /* Full width for smaller screens */
-    }
-}
-
-/* Basic Media Query for iPhones and Small Screens */
-@media (max-width: 480px) {
-    /* General Styles for Smaller Screens */
-    body {
-        font-size: 14px; /* Slightly smaller base font size */
-        line-height: 1.4;
-        padding: 0 10px; /* Add some padding to the edges */
+        margin: 10px 0; /* Reduce margins for tighter spacing */
+        padding: 10px; /* Adjust padding for smaller items */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for visual depth */
+        background: #fff; /* White background for clarity */
+        border-radius: 8px; /* Slightly rounded corners */
     }
 
-    /* Navigation Bar */
-    header nav ul {
-        flex-direction: column; /* Stack navigation links vertically */
-        align-items: center; /* Center the links */
-        padding: 0;
+    .portfolio-item img {
+        width: 100%; /* Ensure images fit within the portfolio item */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 5px; /* Border radius for image edges */
     }
 
-    header nav ul li {
-        margin: 10px 0; /* Add vertical spacing */
-    }
-
-    header nav ul li a {
-        font-size: 16px; /* Slightly smaller font size */
-        padding: 10px 15px; /* Adjust padding for touch areas */
+    /* Portfolio Grid */
+    .portfolio-grid {
+        display: grid; /* Ensure grid layout */
+        grid-template-columns: 1fr; /* Stack items vertically (single column) */
+        grid-gap: 20px; /* Slightly increase space between stacked items */
+        margin: 0 auto; /* Center the grid */
+        padding: 10px; /* Add padding for better spacing */
     }
 
     /* Hero Section */
     #intro, #galaga-hero, #swordfish-hero {
         padding: 40px 15px; /* Reduce padding for smaller screens */
         background-size: cover; /* Ensure the background image scales well */
+        background-position: center center; /* Center background for better visibility */
     }
 
     #intro h1, #galaga-hero h1, #swordfish-hero h1 {
@@ -579,19 +703,20 @@ footer {
 
     #intro p, #galaga-hero p, #swordfish-hero p {
         font-size: 1rem; /* Adjust paragraph font size */
+        line-height: 1.6; /* Adjust line height for readability */
+    }
+    /* Adjust the padding of the intro section to move it up */
+    #intro {
+        padding-top: 40px;  /* Reduce the top padding to bring it closer to the toggle button */
     }
 
-    /* Portfolio Grid */
-    .portfolio-grid {
-        grid-template-columns: 1fr; /* Single column for small screens */
+    /* Alternatively, use margin-top for a negative margin effect */
+    #intro {
+        margin-top: -30px; /* Use negative margin to pull the section up */
     }
 
-    .portfolio-item {
-        margin: 10px 0; /* Reduce margins for tighter spacing */
-        padding: 10px; /* Adjust padding for smaller items */
-    }
 
-    /* Buttons */
+    /* Button Styling */
     .btn {
         font-size: 0.9rem; /* Adjust font size for buttons */
         padding: 10px 20px; /* Reduce padding */
@@ -601,11 +726,79 @@ footer {
         flex-direction: column; /* Stack buttons vertically */
         gap: 10px; /* Add spacing between buttons */
     }
+    /* Add padding to the top of the resume content to avoid overlap with the toggle button */
+    body.resume main {
+        padding-top: 60px; /* Adjust this value to match the height of your toggle button */
+    }
+    /* Apply padding to the top of the resume content to prevent overlap with the toggle button */
+    main {
+        padding-top: 30px; /* Adjust this value to match the height of your toggle button */
+    }
+
+    /* Alternatively, apply padding to the specific section if you don't want to affect other sections */
+    #resume {
+        margin-top: 30px; /* Push the content below the toggle button */
+    }
+    /* Shift the entire resume content to the right */
+    #resume {
+        margin-left: 10px; /* Move the content 20px to the right */
+        padding-left: 10px; /* Additional padding to the left of the content */
+    }
+    
+
+    /* Add padding to sections for better spacing */
+    .resume-container {
+        padding-left: 20px; /* Adjust the left padding for content */
+    }
+
+    /* Optionally adjust padding for individual sections to space things out more */
+    .resume-summary, .resume-section {
+        padding-left: 15px; /* Shift text inside individual sections */
+    }
+
+    /* Change text alignment for specific sections */
+    .resume-section h2 {
+        text-align: left; /* Align headings to the left */
+    }
+
+    /* Adjust list item text alignment */
+    .resume-section ul li {
+        text-align: left; /* Align list items to the left */
+    }
+
+    /* Style for Resume headings */
+    .resume-summary h2, .resume-section h2 {
+        font-size: 2rem;
+        color: #333; /* Dark color for better readability */
+        margin-bottom: 15px;
+        font-weight: bold; /* Make headings bold */
+    }
+
+
 
     /* Footer */
     footer {
         font-size: 0.8rem; /* Slightly smaller footer text */
         padding: 10px 5px;
+        text-align: center; /* Center footer text */
     }
 }
+
+/* Keyframe Animation for Menu Appearance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
 

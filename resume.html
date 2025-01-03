@@ -8,26 +8,30 @@
 </head>
 <body>
     <header>
+        <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
         <nav>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="resume.html" class="active">Resume</a></li>
+                <li><a href="resume.html">Resume</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+    
 
     <main>
         <section id="resume">
             <h1>My Resume</h1>
             <div class="resume-container">
+                <!-- Summary Section -->
                 <div class="resume-summary">
                     <h2>Summary</h2>
-                    <p>Creative and detail-oriented computer scientist with a concentration in digital arts, passionate about combining technology and design to create engaging digital experiences. Proficient in web development, graphic design, and 3D modeling.</p>
+                    <p>Detail-oriented computer scientist with a strong foundation in programming, algorithm design, and software development. Skilled in multiple programming languages such as Python, Java, C++, and JavaScript, with a focus on building efficient algorithms, solving complex computational problems, and creating scalable software solutions.</p>
                 </div>
 
+                <!-- Education Section -->
                 <div class="resume-section">
                     <h2>Education</h2>
                     <ul>
@@ -42,31 +46,39 @@
                     </ul>
                 </div>
 
+                <!-- Experience Section -->
                 <div class="resume-section">
                     <h2>Experience</h2>
                     <ul>
                         <li>
-                            <strong>Freelance Web Developer</strong>  
-                            <br>Designed and developed custom websites for clients, focusing on responsive design and user experience.
+                            <strong>Freelance Software Developer</strong>  
+                            <br>Developed and deployed full-stack web applications with a focus on clean, maintainable code and efficient algorithms. Worked on performance optimization and wrote unit tests to ensure software reliability.
                         </li>
                         <li>
-                            <strong>Graphic Designer</strong>  
-                            <br>Created digital artwork and branding assets for small businesses and organizations.
+                            <strong>Freelance Web Developer</strong>  
+                            <br>Designed and developed responsive websites, focusing on web application frameworks like React and Express. Applied modern JavaScript techniques to enhance user interactivity and performance.
+                        </li>
+                        <li>
+                            <strong>Software Engineering Intern</strong>  
+                            <br>Contributed to the design and implementation of a customer-facing product using Java, focusing on building scalable backend services. Applied data structures and algorithms to solve performance-related issues.
                         </li>
                     </ul>
                 </div>
 
+                <!-- Skills Section -->
                 <div class="resume-section">
                     <h2>Skills</h2>
                     <ul>
-                        <li>Programming Languages: HTML, CSS, JavaScript, Python, C++</li>
-                        <li>Web Development: Responsive Design, SEO Optimization</li>
-                        <li>Digital Arts: Adobe Photoshop, Illustrator, Blender</li>
-                        <li>3D Modeling: Maya, Blender</li>
-                        <li>Soft Skills: Communication, Problem-Solving, Time Management</li>
+                        <li>Programming Languages: Python, Java, C++, JavaScript, SML</li>
+                        <li>Algorithm Design: Dynamic Programming, Data Structures (Trees, Graphs, Hashing)</li>
+                        <li>Software Development: Full-stack Web Development (HTML, CSS, JavaScript, Node.js), REST APIs</li>
+                        <li>Version Control: Git, GitHub</li>
+                        <li>Problem Solving: Competitive Programming, LeetCode, HackerRank</li>
+                        <li>Software Tools: VS Code, IntelliJ IDEA, Eclipse</li>
                     </ul>
                 </div>
 
+                <!-- Download Resume Button -->
                 <div class="resume-download">
                     <a href="ConnorResume.pdf" class="btn" download>Download Resume</a>
                 </div>
@@ -77,5 +89,7 @@
     <footer>
         <p>&copy; 2024 Connor Hege. All Rights Reserved.</p>
     </footer>
+    <script src="script.js"></script>
+
 </body>
 </html>
